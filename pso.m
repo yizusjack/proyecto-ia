@@ -133,8 +133,6 @@ for it = 1:MaxIt
     
     BestCost(it) = GlobalBest.Cost;
     
-    %disp(['Iteration ' num2str(it) ': Best Cost = ' num2str(BestCost(it))]);
-    
     w = w*wdamp;
     
 end

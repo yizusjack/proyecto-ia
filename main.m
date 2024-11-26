@@ -24,15 +24,16 @@ matrizCosto = [];
 costos = [];
 disp("PSO")
 for i = 1:10
-    disp(["Corrida " , i]);
     [bs, bc] = pso();
-    disp(["Mejor costo ", bs.Cost]);
     costos(i) = bs.Cost;
 
     if (bs.Cost > bestSolPso || isnan(bestSolPso))
         matrizCosto = bc;
     end
 end
+
+disp("Resultados obtenidos:");
+disp(costos);
 
 promedio = mean(costos);
 disp(['El promedio es: ', num2str(promedio)]);
@@ -49,7 +50,7 @@ grid on;
 
 disp([newline,'GA']);
 % Definimos la funcion objetivo
-fobj = @(x) -SumSquare(x);
+fobj = @(x) -Matya(x);
 
 % Parámetros ga
 D = 2; % Dimensiones
@@ -72,9 +73,9 @@ fprintf('Promedio: %.4f, Desviación Estándar: %.4f\n', promedio, desviacion);
 
 disp([newline,'DE']);
 
-NP = 50; % Tamaño de la población
-lb = -5.12; % Límite inferior
-ub = 5.12; % Límite superior
+NP = 100; % Tamaño de la población
+lb = -10; % Límite inferior
+ub = 10; % Límite superior
 F = 0.8; % Factor de escala
 CR = 0.9; % Probabilidad de recombinación
 
