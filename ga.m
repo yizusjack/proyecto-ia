@@ -56,7 +56,9 @@ function [promedio, desviacion_std, evolucion_mejor] = ga(func_objetivo, D, iter
 
         mejores_valores(corrida) = max(fitness); % Guardar el mejor fitness de esta corrida
     end
-
+    
+    disp('Resultados de las corridas:');
+    disp(mejores_valores');
     promedio = mean(mejores_valores);
     desviacion_std = std(mejores_valores);
 end

@@ -1,7 +1,7 @@
 function[BestSol, BestCost] = pso
 %% Problem Definition
 
-CostFunction = @(x) -Matya(x);        % Cost Function
+CostFunction = @(x) -SumSquare(x);        % Cost Function
 
 nVar = 2;            % Number of Decision Variables
 

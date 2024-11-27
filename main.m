@@ -46,7 +46,7 @@ corridas = 10; % Corridas
 
 % Graficar ga
 figure;
-plot(1:iteraciones, evolucion, 'LineWidth', 2);
+semilogy(1:iteraciones, evolucion, 'LineWidth', 2);
 xlabel('Iteraciones');
 ylabel('Valor de la Función Objetivo');
 title('Evolución del Mejor Valor');
