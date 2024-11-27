@@ -54,7 +54,7 @@ function [mejores_valores, promedio, desviacion_estandar] = de(fobj, D, iteracio
     desviacion_estandar = std(mejores_valores);
 
     figure;
-    plot(1:iteraciones, evolucion, 'LineWidth', 2);
+    semilogy(1:iteraciones, evolucion, 'LineWidth', 2);
     xlabel('Iteraciones');
     ylabel('Mejor Valor de la Función Objetivo');
     title('Evolución del Valor de la Función Objetivo (Maximización)');
